@@ -54,7 +54,7 @@ public class BatchConfig {
     reader= new FlatFileItemReader<>();
     
     reader.setResource(new ClassPathResource("com/nt/csv/graduates.csv"));
-    
+    System.out.println("changes here");
     reader.setLineMapper(new DefaultLineMapper<ExamResult>() {{
       setLineTokenizer(new DelimitedLineTokenizer() {{
         setNames(new String[]{"id", "sem","percentage"});
